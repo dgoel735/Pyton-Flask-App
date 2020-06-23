@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Flask Application </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"
+    </head>
+    <body>
+        <header>  
+            <div class="container"> <!-- We are using class container to refer from our CSS Code.. -->
+                <h1 class="logo" > Deepika's Web app </h1>
+                <strong><nav>
+                    <u1 class="menu">
+                        <li><a href="{{ url_for('home') }}">Home</a></li>  <!-- We use url_for method for "Home" method that we created in our script1.py file -->
+                        <li><a href="{{ url_for('about') }}">About</a></li> 
+                    </u1>
+                </nav></strong>
+            </div>
+        </header>
+        <div class="container">
+            {%block content%} 
+            {%endblock%}
+        </div>
+    </body>
+</html>
